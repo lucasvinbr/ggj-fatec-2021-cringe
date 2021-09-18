@@ -12,5 +12,5 @@ Lucas Vinicius @lucasvinbr - Programming
 
 Renato Eike @MegaEike - Game design, art
 
-Logan Quasar - Game design, art
+Logan Quasar (https://loganquasar.itch.io/) - Game design, art
 
