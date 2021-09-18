@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="280.057" />
+	<attribute name="Next Replicated Node ID" value="1036" />
+	<attribute name="Next Replicated Component ID" value="4025" />
+	<attribute name="Next Local Node ID" value="16777216" />
+	<attribute name="Next Local Component ID" value="16777216" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="PhysicsWorld2D" id="3">
+		<attribute name="Draw Shape" value="true" />
+		<attribute name="Allow Sleeping" value="true" />
+		<attribute name="Warm Starting" value="true" />
+		<attribute name="Auto Clear Forces" value="true" />
+	</component>
+	<component type="Renderer2D" id="5" />
+	<node id="2">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Ground" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="2 2 1" />
+		<attribute name="Variables" />
+		<component type="StaticSprite2D" id="4">
+			<attribute name="Sprite" value="Sprite2D;Urho2D/cringe/Floor2.png" />
+			<attribute name="Draw Rectangle" value="-5.12 -5.12 5.12 5.12" />
+			<attribute name="Texture Rectangle" value="4.88281e-08 1 1 4.88281e-08" />
+		</component>
+	</node>
+	<node id="3">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="20 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="6" />
+		<component type="CollisionBox2D" id="7">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="4">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-20 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="8" />
+		<component type="CollisionBox2D" id="9">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="5">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 20 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="10" />
+		<component type="CollisionBox2D" id="11">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="6">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 -20 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="12" />
+		<component type="CollisionBox2D" id="13">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="1017">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="DynamicContent" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="1018">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Player" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-6.52093 -2.7252 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="AnimatedSprite2D" id="3956">
+				<attribute name="Layer" value="3" />
+				<attribute name="Flip X" value="true" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/player.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3957">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="3958">
+				<attribute name="Radius" value="1.1" />
+				<attribute name="Category Bits" value="2" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0" />
+				<attribute name="Restitution" value="0.1" />
+			</component>
+			<component type="LuaScriptInstance" id="3959">
+				<attribute name="Script Object Type" value="CringePlayer" />
+				<attribute name="shotInterval" value="0.65" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastShot" value="3.25331700406969" />
+				<attribute name="shootAnimTime" value="0.2" />
+			</component>
+			<node id="1019">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="FollowerBG" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="2.5 2.5 2.5" />
+				<attribute name="Variables" />
+				<component type="StaticSprite2D" id="3960">
+					<attribute name="Layer" value="-1" />
+					<attribute name="Sprite" value="Sprite2D;Urho2D/cringe/HorizonBG.png" />
+					<attribute name="Draw Rectangle" value="-14.875 -5.635 14.875 5.635" />
+					<attribute name="Texture Rectangle" value="1.68067e-08 1 1 4.43656e-08" />
+				</component>
+			</node>
+		</node>
+		<node id="1020">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-1.11728 -4.58602 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3961">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.43498200178146" />
+			</component>
+			<component type="AnimatedSprite2D" id="3962">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3963">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3964">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1021">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-8.50337 0.0808744 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3965">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3966">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3967">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3968">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1022">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="6.34327 -0.268868 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3969">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3970">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3971">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3972">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1023">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="9.81262 -4.62142 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3973">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3974">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3975">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3976">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1025">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-7.82952 -6.62648 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3981">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3982">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3983">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3984">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1026">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="4.47554 6.33717 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3985">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3986">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3987">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3988">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1027">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="EnemyGenerator" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-1.62511 7.92596 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.4 0.4 0.4" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3989">
+				<attribute name="Script Object Type" value="CringeEnemyGenerator" />
+				<attribute name="timeBetweenGens" value="3" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeSinceLastGen" value="1.41828850097954" />
+			</component>
+			<component type="AnimatedSprite2D" id="3990">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_generator.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="3991">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+			</component>
+			<component type="CollisionCircle2D" id="3992">
+				<attribute name="Radius" value="0.65" />
+				<attribute name="Center" value="0 -0.4" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="1" />
+			</component>
+		</node>
+		<node id="1029">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="-1.36935 -3.78005 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="3997">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="-4.41755 3.07657" />
+				<attribute name="timeSinceLastShot" value="1.43498200178146" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.41828850097954" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="3998">
+				<attribute name="Layer" value="3" />
+				<attribute name="Flip X" value="true" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="3999">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4000">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1030">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="-7.96557 0.0675245 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4001">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="3.21024 -6.68996" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4002">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4003">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4004">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1031">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="6.38251 0.581988 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4005">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="6.46107 1.807" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4006">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4007">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4008">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1032">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="9.64623 -3.79231 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4009">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="5.93432 9.37315" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4010">
+				<attribute name="Layer" value="3" />
+				<attribute name="Flip X" value="true" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4011">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4012">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1033">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="-7.48415 -5.88088 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4013">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="2.63771 8.96786" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4014">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4015">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4016">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1034">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="4.00179 6.27858 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4017">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="-8.99045 -6.42811" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4018">
+				<attribute name="Layer" value="3" />
+				<attribute name="Flip X" value="true" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4019">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4020">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="1035">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Enemy" />
+			<attribute name="Tags">
+				<string value="enemy" />
+			</attribute>
+			<attribute name="Position" value="-1.90476 8.05421 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.15 0.15 0.15" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="4021">
+				<attribute name="Script Object Type" value="CringeEnemyBarbecue" />
+				<attribute name="chargeDistance" value="2.5" />
+				<attribute name="chargingAtPlayer" value="false" />
+				<attribute name="shootAnimTime" value="0.2" />
+				<attribute name="moveTarget" value="-5.54186 -7.8338" />
+				<attribute name="timeSinceLastShot" value="1.41828850097954" />
+				<attribute name="timeSinceLastMoveTargetChange" value="1.40153150074184" />
+				<attribute name="shootRange" value="1.6" />
+				<attribute name="alwaysChargesAtPlayer" value="false" />
+				<attribute name="moveSpeed" value="0.875" />
+				<attribute name="shotInterval" value="2" />
+				<attribute name="killed" value="false" />
+				<attribute name="timeBetweenMoveTargetChanges" value="8" />
+				<attribute name="firing" value="false" />
+			</component>
+			<component type="AnimatedSprite2D" id="4022">
+				<attribute name="Layer" value="3" />
+				<attribute name="Flip X" value="true" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/cringe/enemies/enemy_barbecue.scml" />
+				<attribute name="Animation" value="move" />
+			</component>
+			<component type="RigidBody2D" id="4023">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="4024">
+				<attribute name="Radius" value="1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+	</node>
+</scene>

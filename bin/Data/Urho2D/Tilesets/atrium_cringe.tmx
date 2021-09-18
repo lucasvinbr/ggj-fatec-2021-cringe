@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="isometric" renderorder="right-down" width="1" height="1" tilewidth="2059" tileheight="524" infinite="0" nextlayerid="8" nextobjectid="69">
+ <tileset firstgid="1" name="cringe" tilewidth="2059" tileheight="524" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="2059" height="524" source="cringe/Floors.png"/>
+  </tile>
+ </tileset>
+ <layer id="6" name="Occludees" width="1" height="1">
+  <data>
+   <tile gid="1"/>
+  </data>
+ </layer>
+ <objectgroup id="5" name="Physics">
+  <object id="65" x="220.052" y="-324.052">
+   <polygon points="0,0 515.717,944.283 659.712,692.288"/>
+  </object>
+  <object id="66" x="208.019" y="743.981">
+   <polygon points="0,0 491.799,-391.799 402.72,-18.7198 90.0719,81.9281"/>
+  </object>
+  <object id="67" x="-100.076" y="97.4097">
+   <polygon points="0,0 359.861,715.472 9.49701,359.17"/>
+  </object>
+  <object id="68" x="-101.356" y="101.856">
+   <polygon points="-8.01603,12.6827 380.714,-355.214 326.584,-398.084 -14.232,-103.601"/>
+  </object>
+ </objectgroup>
+</map>
