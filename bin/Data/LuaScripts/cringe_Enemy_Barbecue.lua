@@ -1,17 +1,18 @@
----@class CringeEnemyBarbecue : LuaScriptObject
+require "LuaScripts/cringe_Enemy"
+
+---@class CringeEnemyBarbecue : CringeEnemy
 
 ---@type CringeEnemyBarbecue
-CringeEnemyBarbecue = ScriptObject()
+CringeEnemyBarbecue = {}
+
+setmetatable(CringeEnemyBarbecue, CringeEnemy)
+local super = CringeEnemy
+--CringeEnemy.__index = CringeEnemy
 
 function CringeEnemyBarbecue:Start()
-    self.moveSpeed = MOVE_SPEED_X / 4
-    self.alwaysChargesAtPlayer = false
-    self.chargingAtPlayer = false
-    self.moveTarget = self.node.position2D
-    self.killed = false
-    self.chargeDistance = 2.5
-    self.timeBetweenMoveTargetChanges = 8.0
-    self.timeSinceLastMoveTargetChange = self.timeBetweenMoveTargetChanges
+    super.Start(self)
+
+    log:Write(LOG_DEBUG, "Barbecue start!")
 
     self.shotInterval = 2.0
     self.timeSinceLastShot = 0.0
@@ -19,38 +20,6 @@ function CringeEnemyBarbecue:Start()
     self.firing = false
 
     self.shootRange = 1.6
-
-    self.node:AddTag(TAG_ENEMY)
-
-    self.moveDir = Vector3.ZERO
-    ---@type AnimatedSprite2D
-    self.animatedSprite = self.node:CreateComponent("AnimatedSprite2D")
-    self.animatedSprite:SetLayer(3)
-
-    ---@type RigidBody2D
-    self.rigidbody = self.node:CreateComponent("RigidBody2D")
-    self.rigidbody.bodyType = BT_DYNAMIC
-    self.rigidbody.allowSleep = false
-    self.rigidbody:SetGravityScale(0.0)
-
-    ---@type CollisionCircle2D
-    self.collisionShape = self.node:CreateComponent("CollisionCircle2D")
-    self.collisionShape:SetRadius(1.0)
-    self.collisionShape:SetFriction(0.8)
-    self.collisionShape:SetCategoryBits(COLMASK_ENEMY)
-
-    coroutine.start(function ()
-        while self.node ~= nil do
-            coroutine.sleep(1.0)
-            if DistanceBetween(self.node.position2D, CringePlayerNode.position2D) < self.chargeDistance then
-                self.chargingAtPlayer = true
-            else
-                if not self.alwaysChargesAtPlayer then
-                    self.chargingAtPlayer = false
-                end
-            end
-        end
-    end)
 
     self:SubscribeToEvent(self.node, "NodeBeginContact2D", "CringeEnemyBarbecue:HandleCollisionStart")
 end
@@ -86,7 +55,6 @@ function CringeEnemyBarbecue:Update(timeStep)
         self.moveTarget = Vector2(Random(-WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x, WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x), Random(-WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y, WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y))
         self.timeSinceLastMoveTargetChange = 0.0
     end
-
 
     -- shooting/anim
     self.timeSinceLastShot = self.timeSinceLastShot + timeStep
